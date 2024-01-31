@@ -1,13 +1,96 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  font-size: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+  color: #fd7e07;
+}
+body{
+  margin: 0
+  
+}
+
+.frontpage{
+  background: radial-gradient(50% 50% at 50% 50%, #EC8C24 0%, #EC4213 100%);
+  color: white;
+  font-family:Bahnschrift;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.frontpage-content{
+
+
+}
+
+.logo-div{
+position: relative;
+width: 12.5em;
+transform: translateX(50%);
+}
+
+.studycreek-logo{
+
+  
+
+
+}
+.brandname{
+  position: absolute;
+  top: 5.9em;
+  left: 1.5em;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  }
+
+.studentImage{
+width: 27em;
+margin-top: 2.5em;
+}
+
+.frontpage-text{
+  margin-top: 1em;
+}
+
+.frontpage-text > p{
+font-size: 1.4rem;
+}
+.buttons{
+margin: 2em 4em;
+
+}
+.start-button{
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 1.5em;
+  width: 16em;
+  font-weight: bolder;
+  height: 2.5em;
+  background-color: white;
+  outline: none;
+  border: none;
+  font-family: Bahnschrift;
+  cursor: pointer;
+}
+.explore-button{
+    font-size: 1.4rem;
+    font-weight: bolder;
+    display: block;
+    margin-bottom: 1.5em;
+    width: 16em;
+    height: 2.5em;
+    background-color: #fd7e07;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    font-family: Bahnschrift;
+    cursor: pointer;
+  }
