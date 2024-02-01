@@ -3,7 +3,7 @@ import {useNavigate } from "react-router-dom"
 import '../signup.css'
 import image from '../assets/studycreekcolorlogo 1.png'
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
-import { auth } from "../firebase"
+import { auth } from "../firebaseConfig"
 import { FaAngleRight } from "react-icons/fa6";
 
 export default function Signup() {
@@ -43,8 +43,10 @@ export default function Signup() {
         .then(()=>{
           setTimeout(()=>{
             setShowSuccessSign(true)
-          }, 2000)
-        
+          }, 1000)
+        })
+        .catch((err)=>{
+            console.log(err)
         })
     }
 
@@ -60,7 +62,7 @@ export default function Signup() {
             { showSuccessSign && <div className='signup-sucess'>
                 <h2 className='success-text'>Successs!</h2>
                 <p>Thank you for signing up, we are happy to have you onboard as a prestigiuos member</p>
-                <button className='success-button'>Sign In <span><FaAngleRight /></span></button>
+                <button className='success-button' onClick={()=>navigate('/welcome-back')}>Sign In <span><FaAngleRight /></span></button>
             </div>}
                 <div className= {showSuccessSign? 'blur input-div':'input-div'}>
                     <h2>Create Your Account</h2> 
