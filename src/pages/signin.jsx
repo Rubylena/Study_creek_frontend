@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import image from '../assets/Rectangle 7.png'
 import '../signin.css'
 import { IoIosArrowRoundBack, IoLogoGoogle } from "react-icons/io";
-import { RiLinkedinFill } from "react-icons/ri";
+import { ImFacebook2 } from "react-icons/im";
 import { TfiEmail } from "react-icons/tfi";
 import { useNavigate } from 'react-router-dom';
 
@@ -38,6 +38,9 @@ export default function Signin() {
             Sign In with Email
           </button>        
                    </div>
+                <button className='button linkedin-button'><span><ImFacebook2 /></span> Sign In with Facebook</button>
+                <button className='button email-button'><span><TfiEmail /></span> Sign In with Email</button>
+            </div>
             <p className='newtext'>New here? <span onClick={()=>{setShowModal(!showModal)}}>Create Account</span></p>
       {    showModal &&  <div className='signup-modal'>
                 <div className='modal-content'>
