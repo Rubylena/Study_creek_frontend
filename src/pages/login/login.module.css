@@ -1,0 +1,77 @@
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.backButton {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 670px;
+}
+.heroWord{
+  margin-top: 60px;
+  margin-bottom: 0;
+  font-size: 24px;
+  color: #EC4213;
+
+}
+.paragraph{
+  color: #EC8C24;
+  font-size: 12px;
+  font-family: Bahnschrift;
+}
+
+.content {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.loginForm input {
+  width: 100%;
+  height: 40px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.forgotPassword {
+  width: 100%;
+  text-align: right;
+  color: #ff5733;
+  text-decoration: none;
+}
+
+.loginForm button {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -13,6 +13,10 @@ export default function Signin() {
     function signup(){
         navigate('/signup')
     }
+    function signInWithEmail() {
+        
+        navigate('/welcome-back');
+      }
   return (
     <div className='signup'>
           <h1 className='back-arrow' onClick={()=> navigate(-1)}><IoIosArrowRoundBack/></h1>
@@ -26,6 +30,14 @@ export default function Signin() {
 
             <div className='signin-buttons'>
                 <button className='button google-button'><span><IoLogoGoogle/></span> Sign In with Google</button>
+                <button className='button linkedin-button'><span><RiLinkedinFill/></span> Sign In with Linkedin</button>
+                <button className="button email-button" onClick={signInWithEmail}>
+            <span>
+              <TfiEmail />
+            </span>{' '}
+            Sign In with Email
+          </button>        
+                   </div>
                 <button className='button linkedin-button'><span><ImFacebook2 /></span> Sign In with Facebook</button>
                 <button className='button email-button'><span><TfiEmail /></span> Sign In with Email</button>
             </div>
@@ -40,7 +52,7 @@ export default function Signin() {
                     </div>
                 </div>
                 <p className='consent-text'>By proceeding you agree to our
-<a href>Terms & Condition and privacy policy</a></p>
+             <a href>Terms & Condition and privacy policy</a></p>
             </div>}
         </div>
     </div>
