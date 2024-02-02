@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import {useNavigate } from "react-router-dom"
 import '../signup.css'
-import image from '../assets/studycreekcolorlogo 1.png'
+import image from '../assets/studycreekcolorICON.png'
+
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
 import { auth } from "../firebaseConfig"
 import { FaAngleRight } from "react-icons/fa6";
@@ -39,7 +40,6 @@ export default function Signup() {
             phoneNumber: userInfo.Phonenumber
           })
         })
-
         .then(()=>{
           setTimeout(()=>{
             setShowSuccessSign(true)
@@ -53,13 +53,13 @@ export default function Signup() {
   return (
     <div>
         <div className='logo-heading'>
-            <img src={image} alt='logo'/>
+            <img src={image} alt='logo' width='70px'/>
             <h2>Study Creek</h2>
         </div>
         
         <div className='signupfield'>
             <div className='inputfield'>
-            { showSuccessSign && <div className='signup-sucess'>
+            { <div className='signup-sucess'>
                 <h2 className='success-text'>Successs!</h2>
                 <p>Thank you for signing up, we are happy to have you onboard as a prestigiuos member</p>
                 <button className='success-button' onClick={()=>navigate('/welcome-back')}>Sign In <span><FaAngleRight /></span></button>
@@ -80,29 +80,42 @@ export default function Signup() {
                             value={userInfo.Lastname}
                         />
                     </div>
-                        
-                    <input type="text" placeholder='*Email Address'
+                    <div className="input-area">
+                        <label htmlFor="Email"><span class="label-style">*Email</span></label>
+                        <input type="text"
                             name='Email'
                             onChange={handleInputChange}
                             value={userInfo.Email}
-                    />
-                    <input type="text" placeholder='*Phone Number'
+                        />
+                    </div>
+                    <div className="input-area">
+                        <label htmlFor="Phonenumber"><span class="label-style">*Phone Number</span></label>
+                        <input type="text" 
                             name='Phonenumber'
                             onChange={handleInputChange}
                             value={userInfo.Phonenumber}
-                    />
-                    <input type="text"  placeholder='*Country'
+                        />
+                    </div>
+                    <div className="input-area">
+                        <label htmlFor="Country"><span class="label-style">*Country</span></label>
+                        <input type="text" 
                             name='Country'
                             onChange={handleInputChange}
                             value={userInfo.Country}
-                    />
-                    <input type="password" placeholder='*Password'
+                        />
+                    </div>
+                    <div className="input-area">
+                        <label htmlFor="Password"><span class="label-style">*Password</span></label>
+                        <input type="password"
                             name='Password'
                             onChange={handleInputChange}
                             value={userInfo.Password}
-                    />
-                    <input type="password" placeholder='*Confirm Password'
-                    />
+                        />
+                    </div>
+                    <div className="input-area">
+                        <label htmlFor="Lastname"><span class="label-style">*Confirm Password</span></label>
+                        <input type="password"/>
+                    </div>
                     <button className='signup-button'
                         onClick={createUser}>Submit
                     </button>

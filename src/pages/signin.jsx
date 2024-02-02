@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import image from '../assets/Rectangle 7.png'
+import image from '../assets/studycreekcolor.png'
 import '../signin.css'
 import { IoIosArrowRoundBack, IoLogoGoogle } from "react-icons/io";
 import { ImFacebook2 } from "react-icons/im";

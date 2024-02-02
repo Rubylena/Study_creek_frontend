@@ -8,8 +8,7 @@ export default function FrontPage() {
     <div className='frontpage'>
         <div className='frontpage-content'>
             <div className='logo-div'>
-            <img src={image} alt='studycreek-logo' className='white-studycreek-logo'/>
-            <h3 className='brandname'>StudyCreek</h3>
+            <img src={image} alt='studycreek-logo' className='white-studycreek-logo' width='90px' />
             </div>
             <div>
                 <img src={image2} alt='studentImage' className='studentImage'/>

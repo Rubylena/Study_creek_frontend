@@ -5,7 +5,7 @@ import styles from './welcomeback.module.css';
 import logoImage from '../../assets/logoImage.png';
 import backgroundImage from '../../assets/banner.png';
 
-const WelcomeBack = () => {
+const Welcome = () => {
   const navigate = useNavigate();
 
   function logInAsATeacher() {
@@ -22,7 +22,7 @@ const WelcomeBack = () => {
         <img src={logoImage} alt="StudyCreek logo" style={{ maxWidth: '100px' }} />
       </div>
       <div className={styles.welcome}>
-        <h2>Welcome Back</h2>
+        <h2>Welcome</h2>
       </div>
       <div className={styles.topSection} style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className={styles.overlay}></div>
@@ -43,4 +43,4 @@ const WelcomeBack = () => {
   );
 };
 
-export default WelcomeBack;
+export default Welcome;
