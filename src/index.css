@@ -32,24 +32,9 @@ body{
 }
 
 .logo-div{
-position: relative;
-width: 12.5em;
-transform: translateX(50%);
+  margin-left: 8rem;
 }
 
-.studycreek-logo{
-
-  
-
-
-}
-.brandname{
-  position: absolute;
-  top: 5.9em;
-  left: 1.5em;
-  letter-spacing: 1px;
-  font-size: 1.5rem;
-  }
 
 .studentImage{
 width: 27em;
