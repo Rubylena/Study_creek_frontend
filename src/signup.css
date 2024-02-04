@@ -1,19 +1,21 @@
-body{
+body {
     font-family: Bahnschrift bold condensed;
 }
-.logo-heading{
-   width: 100%;
-   height: 6rem;
-   box-shadow: 0px 0px 2px 0px #00000040;
-   padding-left: 2em;
-   padding-bottom: 2em;
+
+.logo-heading {
+    width: 100%;
+    height: 6rem;
+    box-shadow: 0px 0px 2px 0px #00000040;
+    padding-left: 2em;
+    padding-bottom: 2em;
 
 }
-.logo-heading >h2{
+
+.logo-heading>h2 {
     display: inline-block;
     background: radial-gradient(50% 50% at 50% 50%, #EC8C24 0%, #EC4213 100%);
     background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     margin-left: 0.6em;
     font-size: 2rem;
@@ -21,7 +23,7 @@ body{
     bottom: 0.7em;
 }
 
-.signupfield::before{
+.signupfield::before {
     content: '';
     position: absolute;
     top: -3.5em;
@@ -31,20 +33,20 @@ body{
     background-size: 70vw 90vh;
     background-position: left top;
     z-index: -1;
-    width: 90%; 
+    width: 90%;
     height: 90%;
     opacity: 0.6;
 
 }
 
-.signupfield{
-position: relative;
-z-index: 1;
-width: 100vw;
+.signupfield {
+    position: relative;
+    z-index: 1;
+    width: 100vw;
 
 }
 
-.inputfield{
+.inputfield {
     margin-top: 3em;
     display: flex;
     flex-direction: column;
@@ -53,10 +55,16 @@ width: 100vw;
     margin-bottom: 2em;
 }
 
-.blur{
+.blur {
     opacity: 0.4;
 }
-.signup-sucess{
+
+.hidden {
+    display: none;
+}
+
+.signup-sucess {
+    display: block;
     background: #FFFFFF;
     border-radius: 25px;
     box-shadow: 0px 4px 4px 1px #00000040;
@@ -64,24 +72,24 @@ width: 100vw;
     width: 40em;
     top: 0em;
     z-index: 1;
-    position:absolute;
+    position: absolute;
     padding-bottom: 2em;
 }
 
-.success-text{
+.success-text {
     color: rgba(67, 179, 67, 0.868);
     text-align: center;
     font-size: 2.2rem;
 }
 
-.signup-sucess >p{
+.signup-sucess>p {
     text-align: center;
     font-size: 1.3rem;
     padding: 0 2em;
     line-height: 25px;
 }
 
-.success-button{
+.success-button {
     margin-left: 7em;
     margin-top: 0.5em;
     width: 14em;
@@ -92,19 +100,19 @@ width: 100vw;
     box-shadow: 1px -1px 1px 1px #00000040 inset;
     color: #FFFFFF;
     cursor: pointer;
-    font-family:  Bahnschrift;
+    font-family: Bahnschrift;
     font-size: 1.5rem;
-    
+
 }
 
-.success-button >span{
+.success-button>span {
     margin-left: 4em;
     font-size: 2rem;
     position: relative;
     top: 0.2em;
 }
 
-.input-div{
+.input-div {
     width: 40em;
     height: 100%;
     background: #FFFFFF;
@@ -112,14 +120,15 @@ width: 100vw;
     box-shadow: 0px 5px 5px 5px #00000040;
     padding-top: 2.5em;
 }
-.input-div >h2{
+
+.input-div>h2 {
     text-align: center;
     margin-top: 0;
     font-size: 2rem;
     color: #EC4213;
 }
 
-input{
+input {
     display: block;
     margin-bottom: 3em;
     margin-left: 4em;
@@ -132,26 +141,30 @@ input{
     padding-left: 2em;
 
 }
-.input-area{
+
+.input-area {
     display: flex;
     flex-direction: column;
-  
-  }
-  .input-area label {
+
+}
+
+.input-area label {
     margin-left: 6em;
-  }
-  .input-area label .label-style {
+}
+
+.input-area label .label-style {
     background: #FFF;
     font-weight: bold;
     padding: 0 0.6em;
     position: relative;
-  }
-  .input-area input {
-    margin-top: -9px;
-    
-  }
+}
 
-  .signup-button{
+.input-area input {
+    margin-top: -9px;
+
+}
+
+.signup-button {
     width: 11em;
     height: 28px;
     margin-top: 0.4em;
@@ -162,4 +175,4 @@ input{
     border: none;
     color: #FFFFFF;
 
-  }
+}

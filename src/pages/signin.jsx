@@ -7,6 +7,8 @@ import { TfiEmail } from "react-icons/tfi";
 import { useNavigate } from 'react-router-dom';
 import { FacebookAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from '../firebaseConfig';
+import { toast } from "react-toastify";
+
 
 export default function Signin() {
     const [showModal, setShowModal] = useState(false)
@@ -36,6 +38,10 @@ export default function Signin() {
         const provider = new GoogleAuthProvider()
         signInWithPopup(auth, provider).then((result)=>{
             console.log(result)
+            localStorage.setItem("token", result?._tokenResponse?.idToken);
+            toast.success('Sign-in successful!');
+      
+            navigate("/user-details")
         })
         .catch((error)=>{
             console.log(error)
