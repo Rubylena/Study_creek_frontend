@@ -1,19 +1,31 @@
 import React from 'react'
-import image from '../assets/studycreekcolorICON.png'
-import { MdOutlineMenu } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
-import '../dashboard.css'
+import '../styles/dashboard.css'
+import Published from '../components/published'
+import { useNavigate } from 'react-router-dom'
 
 export default function Dashboard() {
+
+  const navigate = useNavigate()
   return (
-    <div>
-           <div className='logo-section'>
-            <span className='menuIcon'><MdOutlineMenu/></span>
-            <img src={image} alt='logo' width='70px'/>
-            <h2>Study Creek</h2>
-            <span className='profileIcon'> <CgProfile/></span>
+
+    <div className='dashboard'>
+       <div className='first-div'>
+          <h2>Dashboard</h2>
+          <button onClick={()=>navigate('/details')}>Start a New Course</button>
         </div>
-        
+        <p className='welcome-text'>Welcome to your LMS where we can help you manage your contents as a teacher on study creek</p>
+       
+        <div className='search-div'>
+          <h2 className='overview'>Course Overview</h2>
+          <div className='search'>
+              <input type='search' placeholder='search by course title'/>
+          </div>
+        </div>
+        <div className='published-div'>
+          <h2>Published Courses (1)</h2>
+          <Published/>
+        </div>
+           
     </div>
   )
 }

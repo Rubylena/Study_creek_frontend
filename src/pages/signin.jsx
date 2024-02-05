@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import image from '../assets/studycreekcolor.png'
-import '../signin.css'
+import '../styles/signin.css'
 import { IoIosArrowRoundBack, IoLogoGoogle } from "react-icons/io";
 import { ImFacebook2 } from "react-icons/im";
 import { TfiEmail } from "react-icons/tfi";

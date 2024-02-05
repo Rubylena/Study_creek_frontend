@@ -26,13 +26,8 @@ body{
 
 
 
-.frontpage-content{
-
-
-}
-
 .logo-div{
-  margin-left: 8rem;
+   margin-left: 8.5rem; 
 }
 
 
@@ -78,4 +73,14 @@ margin: 2em 4em;
     border: 1px solid white;
     font-family: Bahnschrift;
     cursor: pointer;
+  }
+
+  @media only screen and (min-width: 350px) and (max-width: 600px){
+    .logo-div{
+      margin-left: 10.5rem; 
+   }
+
+   .studentImage{
+    margin-top: 4em;
+    }
   }

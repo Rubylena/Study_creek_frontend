@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {useNavigate } from "react-router-dom"
-import '../signup.css'
+import '../styles/signup.css'
 import image from '../assets/studycreekcolorICON.png'
 
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
@@ -51,7 +51,7 @@ export default function Signup() {
     }
 
   return (
-    <div>
+    <div className='signupPage'>
         <div className='logo-heading'>
             <img src={image} alt='logo' width='70px'/>
             <h2>Study Creek</h2>
@@ -59,7 +59,8 @@ export default function Signup() {
         
         <div className='signupfield'>
             <div className='inputfield'>
-            { <div className='signup-sucess'>
+            { showSuccessSign &&
+              <div className='signup-sucess'>
                 <h2 className='success-text'>Successs!</h2>
                 <p>Thank you for signing up, we are happy to have you onboard as a prestigiuos member</p>
                 <button className='success-button' onClick={()=>navigate('/welcome-back')}>Sign In <span><FaAngleRight /></span></button>

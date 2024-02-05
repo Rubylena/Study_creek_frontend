@@ -1,5 +1,6 @@
 body{
     font-family: Bahnschrift bold condensed;
+    
 }
 .logo-heading{
    width: 100%;
@@ -7,7 +8,12 @@ body{
    box-shadow: 0px 0px 2px 0px #00000040;
    padding-left: 2em;
    padding-bottom: 2em;
+   background-color: #FFFFFF;
 
+}
+
+.signupPage{
+    background-color: #21151505;
 }
 .logo-heading >h2{
     display: inline-block;
@@ -25,15 +31,15 @@ body{
     content: '';
     position: absolute;
     top: -3.5em;
-    left: 13em;
-    background-image: url(./assets/studycreekcrop.png);
+    left: 15em;
+    background-image: url(../assets/studycreekcrop.png);
     background-repeat: no-repeat;
     background-size: 70vw 90vh;
     background-position: left top;
     z-index: -1;
     width: 90%; 
     height: 90%;
-    opacity: 0.6;
+    opacity: 0.2;
 
 }
 
@@ -119,19 +125,7 @@ width: 100vw;
     color: #EC4213;
 }
 
-input{
-    display: block;
-    margin-bottom: 3em;
-    margin-left: 4em;
-    width: 20em;
-    height: 5rem;
-    border: 1px solid black;
-    outline: none;
-    font-size: 1.3rem;
-    font-weight: bolder;
-    padding-left: 2em;
 
-}
 .input-area{
     display: flex;
     flex-direction: column;
@@ -148,6 +142,16 @@ input{
   }
   .input-area input {
     margin-top: -9px;
+    display: block;
+    margin-bottom: 3em;
+    margin-left: 4em;
+    width: 20em;
+    height: 5rem;
+    border: 1px solid black;
+    outline: none;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding-left: 2em;
     
   }
 
@@ -161,5 +165,45 @@ input{
     background: #EC4213;
     border: none;
     color: #FFFFFF;
-
   }
+
+  
+@media only screen and (min-width: 350px) and (max-width: 600px){
+
+    .input-div{
+        width: 35em;
+    }
+
+    .signupfield::before{
+        top: -6em;
+        left: 5em;
+        background-size: 60vw 90vh;
+        background-position: left top;
+        z-index: -1;
+        width: 60%; 
+        height: 90%;
+        opacity: 0.2;
+    }
+
+    .signup-sucess >p{
+        font-size: 1.4rem;
+        padding: 0 2em;
+        line-height: 21px;
+    }
+
+    .signup-sucess{
+        width: 35em;
+    }
+    
+    .success-button{
+        margin-left: 7em;
+        width: 12em;
+    }
+
+    .signup-button{
+        width: 13em;
+        margin-top: 0em;
+        transform: translateX(50%);
+    }
+    
+}
