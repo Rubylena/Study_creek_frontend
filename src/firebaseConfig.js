@@ -3,14 +3,17 @@ import {getApp, getApps, initializeApp } from "firebase/app";
 import {getAuth} from 'firebase/auth'
 
 const FIREBASE_KEY = process.env.REACT_APP_FIREBASE_KEY
+const PROJECT_ID = process.env.REACT_APP_FIREBASE_PROJECTID
+const DOMAIN= process.env.REACT_APP_FIREBASE_DOMAIN
+const APP_ID = process.env.REACT_APP_FIREBASE_APPID
 
 const firebaseConfig = {
   apiKey: FIREBASE_KEY,
-  authDomain: "studycreek-f049d.firebaseapp.com",
-  projectId: "studycreek-f049d",
+  authDomain: DOMAIN,
+  projectId: PROJECT_ID,
   storageBucket: "studycreek-f049d.appspot.com",
   messagingSenderId: "637555834067",
-  appId: "1:637555834067:web:022346f4b059b7e432a826"
+  appId: APP_ID
 };
 
 // Initialize Firebase
