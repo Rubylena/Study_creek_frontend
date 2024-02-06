@@ -9,6 +9,8 @@ import Dashboard from './pages/dashboard'
 import Layout from './components/layout';
 import AddCourse from './components/addCourse';
 import CourseDetail from './pages/courseDetail';
+import UploadCourse from './pages/uploadCourse';
+import PublishCourse from './pages/publishCourse';
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
             <Route path='/dashboard' element={<Dashboard />} />
             <Route element={<AddCourse/>}>
                 <Route path='/details' element={<CourseDetail/>}/>
+                <Route path='/upload' element={<UploadCourse/>}/>
+                <Route path='/publish' element={<PublishCourse/>}/>
             </Route>
 
         </Route>
