@@ -11,7 +11,7 @@
     justify-content: space-between;
     background: conic-gradient(from 180deg at 120.17% 50%, #EC4213 -1.16deg, #EC8C24 50deg, #EC8222 55deg, #EC761F 105.53deg, #EC691C 160.77deg, #EC5F1A 217.51deg, #EC4213 358.84deg, #EC8C24 406.32deg);
     height: 6em;
-    box-shadow: 0px 1px 2px 0px #00000040;
+    box-shadow: 0px 2px 2px 0px #00000040;
 }
 
 .addCourse-heading >h4{
@@ -21,7 +21,6 @@
 
 .addCourse::after{
     content: '';
-    background-image: url(/src/assets/SC\ \(1\).png);
     position: absolute;
     top: 15em;
     left: 15em;
@@ -30,8 +29,34 @@
     background-size: 70vw 90vh;
     background-position: left top;
     z-index: -1;
-    width: 80%; 
-    height: 80%;
+    width: 70%; 
+    height: 90%;
     opacity: 0.2;
 }
+#active{
+    background-color: #FFFFFF;
+    color: #EC4213;
+    width: 5em;
+    height: 3.6em;
+    line-height: 4em;
+    padding-left: 1em;
+    margin: 0;
+}
+
+
+@media only screen and (min-width: 350px) and (max-width: 600px){
+
+    .addCourse::after{
+        top: 20em;
+        left: 8em;
+        background-size: 60vw 60vh;
+        background-position: left top;
+        z-index: -1;
+        width: 55%; 
+        height: 60%;
+        opacity: 0.2;
+    }
+
+}
+
 
