@@ -5,6 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import backButton from '../../assets/Arrow 1.png';
 import logoImage from '../../assets/logoImage.png';
 import styles from './login.module.css';
+import { signInWithEmailAndPassword } from '@firebase/auth';
+import { auth} from '../../firebaseConfig';
 
 const TeacherLogin = () => {
   const navigate = useNavigate();
@@ -23,9 +25,11 @@ const TeacherLogin = () => {
       toast.error('Please fill in both email and password.');
       return;
     }
-
-    
     toast.success('Sign-in successful!');
+
+    signInWithEmailAndPassword(auth, email,password).then(()=>{
+      navigate('/dashboard')
+    })
 
   }
 
