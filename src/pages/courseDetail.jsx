@@ -19,7 +19,6 @@ export default function CourseDetail() {
     }
   }
 
-  console.log(image)
   return (
     <div className='courseDetail'>
         <h2>Course Detail</h2>
