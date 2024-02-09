@@ -33,7 +33,7 @@ body{
 
 .studentImage{
 width: 27em;
-margin-top: 2.5em;
+margin-top:6em;
 }
 
 .frontpage-text{
@@ -51,6 +51,7 @@ margin: 2em 4em;
   font-size: 1.4rem;
   display: block;
   margin-bottom: 1.5em;
+  margin-top: 3em;
   width: 16em;
   font-weight: bolder;
   height: 2.5em;
@@ -60,20 +61,7 @@ margin: 2em 4em;
   font-family: Bahnschrift;
   cursor: pointer;
 }
-.explore-button{
-    font-size: 1.4rem;
-    font-weight: bolder;
-    display: block;
-    margin-bottom: 1.5em;
-    width: 16em;
-    height: 2.5em;
-    background-color: #fd7e07;
-    color: white;
-    outline: none;
-    border: 1px solid white;
-    font-family: Bahnschrift;
-    cursor: pointer;
-  }
+
 
   @media only screen and (min-width: 350px) and (max-width: 600px){
     .logo-div{
@@ -81,6 +69,10 @@ margin: 2em 4em;
    }
 
    .studentImage{
-    margin-top: 4em;
+    margin-top: 8em;
     }
+
+    .frontpage-text > p{
+      margin-left: 1em;
+      }
   }

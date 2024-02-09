@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import backButton from '../../assets/Arrow 1.png';
-import logoImage from '../../assets/logoImage.png';
+import { IoIosArrowRoundBack } from "react-icons/io";
+import logoImage from '../../assets/studycreekcolor.png';
 import styles from './login.module.css';
 
 const StudentLogin = () => {
@@ -31,10 +31,9 @@ const StudentLogin = () => {
 
   return (
     <div className={styles.loginPage}>
-      <div className={styles.header}>
-        <img src={backButton} alt="Back" className={styles.backButton} onClick={goBack} />
+        <IoIosArrowRoundBack  className={styles.backButton} onClick={goBack}/>
         <img src={logoImage} alt="StudyCreek Logo" className={styles.logo} />
-      </div>
+  
       <div className={styles.content}>
         <h1 className={styles.heroWord}>Welcome Back</h1>
         <p className={styles.paragraph}>We love to see you learn! Please Sign in with your registered email...</p>

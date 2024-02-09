@@ -1,38 +1,38 @@
 .loginPage {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 10px;
-}
 
 .backButton {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  margin-left: -35em;
+  margin-top: 4em;
+  color: #EC4213;
 }
 
 .logo {
   width: 100px;
   height: 100px;
-  margin-right: 670px;
+  margin-top: 2em;
+ 
 }
 .heroWord{
-  margin-top: 60px;
+  margin-top: 2em;
   margin-bottom: 0;
   font-size: 24px;
   color: #EC4213;
 
 }
 .paragraph{
-  color: #EC8C24;
+  color: #EC4213;
   font-size: 12px;
   font-family: Bahnschrift;
+  margin-left: 2em;
 }
 
 .content {
@@ -42,14 +42,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 20px;
 }
 
+.loginForm{
+  margin-left: 10em;
+}
+
 .loginForm input {
-  width: 100%;
+  width: 80%;
   height: 40px;
   padding: 20px;
   margin: 20px;
@@ -58,20 +59,64 @@
 }
 
 .forgotPassword {
-  width: 100%;
-  text-align: right;
-  color: #ff5733;
+  width: 80%;
+  margin-left: 2em;
+  color: #EC4213;
   text-decoration: none;
+  display: block;
 }
 
 .loginForm button {
-  width: 100%;
+  width: 80%;
   height: 40px;
   padding: 10px;
-  margin: 10px;
-  background-color: #ff5733;
+  margin: 1em 1.5em ;
+  background-color: #EC8C24;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media(max-width: 768px){
+
+  .content {
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+
+  .loginForm{
+    margin-left: 1em;
+  }
+  
+  .loginForm input {
+    width: 90%;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .forgotPassword {
+    width: 80%;
+    margin-left: 2em;
+  }
+  
+  .loginForm button {
+    width: 90%;
+    margin: 2em 1.5em ;
+  }
+
+  .paragraph{
+    font-size: 1em;
+    margin-left: 1em;
+  }
+
+  .backButton {
+
+    margin-left: -25em;
+    margin-top: 4em;
+    color: #EC4213;
+  }
 }

@@ -1,13 +1,13 @@
 .addCourse >h1{
     color: #EC4213;
-    margin-left: 2.5em;
+    margin-left: 1em;
 
 }
 
 .addCourse-heading{
     display: flex;
-    padding-left: 4.5em;
-    padding-right: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
     justify-content: space-between;
     background: conic-gradient(from 180deg at 120.17% 50%, #EC4213 -1.16deg, #EC8C24 50deg, #EC8222 55deg, #EC761F 105.53deg, #EC691C 160.77deg, #EC5F1A 217.51deg, #EC4213 358.84deg, #EC8C24 406.32deg);
     height: 6em;
@@ -36,10 +36,10 @@
 #active{
     background-color: #FFFFFF;
     color: #EC4213;
-    width: 5em;
+    width: 6em;
     height: 3.6em;
     line-height: 4em;
-    padding-left: 1em;
+    padding-left: 1.3em;
     margin: 0;
 }
 
@@ -55,6 +55,19 @@
         width: 55%; 
         height: 60%;
         opacity: 0.2;
+    }
+
+    .addCourse-heading{
+        padding-left: 0.3em;
+        padding-right: 0.2em;
+    }   
+    
+    .addCourse >h1{
+        color: #EC4213;
+        margin-left: 0.7em;
+        margin-bottom: 0.5em;
+        font-size: 1.7em;
+    
     }
 
 }

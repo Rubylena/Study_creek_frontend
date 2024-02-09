@@ -17,7 +17,6 @@ export default function FrontPage() {
                 <p> Transforming classrooms, empowering minds</p>
                 <div className='buttons'>
                 <button className='start-button'><Link to='/signin'> Get Started</Link></button>
-                <button className='explore-button'>Explore Available courses</button>
                 </div>
             </div>  
         </div>

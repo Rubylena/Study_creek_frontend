@@ -161,39 +161,42 @@ cursor: pointer;
         margin-left: 0em;
         top: 2em;
        position: relative;
-       left: 3em;
+       left: 2em;
         font-size: 3rem;
         }
 
         .signup-content{
+            display: grid;
+            place-items: start;
             margin-top: 7em;
             width: 40em; 
+            padding: 3em 0;
         }
 
         .signup-modal{
-            width: 35em;
-            bottom: 24em;
+            width: 33em;
+            bottom: 23em;
             height: 18em;
         }
         
         .modal-content{
-            margin: 0 3.5em;
+            margin: 0em;
         }
         .modal-content>h3{
-            margin-left: 3em;
+            text-align: center;
             letter-spacing: 1px;
-            padding-top: 1em;
+            padding-top: 0em;
             font-size: 2rem;
         }
         
         
         .modal-buttons{
-            margin-top: 2em;
-            margin-left: 5.5em;
+            margin-top: 1em;
+            margin-left: 3.5em;
         }
         .identity{
             width: 9em;
-            height: 3em;
+            height: 2.5em;
         }
         
         .consent-text{
