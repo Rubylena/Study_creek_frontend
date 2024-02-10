@@ -1,27 +1,22 @@
 .app {
   text-align: center;
   position: relative;
-  min-height: 100vh;
+height: 100vh;
 }
 
 .topSection {
-  background-size: cover;
   background-position: center;
-  background-image: url('../../assets/banner.png');
+  background-repeat: no-repeat;
+  background-image: url('../../assets/Artboard\ 1.png');
   position: relative;
+ top: -1.5em;
   min-height: 78vh;
+  opacity: 0.5;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
 .logo {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .logo img {
@@ -31,9 +26,12 @@
 }
 
 .welcome h2 {
-  color: orangered;
-  font-size: 4em;
-  margin: 20px;
+  background: radial-gradient(50% 50% at 50% 50%, #EC8C24 0%, #EC4213 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text;
+  font-size: 3.5em;
+  margin: 10px;
 }
 
 .content {
@@ -42,20 +40,22 @@
 
 .buttons {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 52%;
+  left: 49%;
   transform: translate(-50%, -50%);
 }
 
 .buttons button {
   margin: 10px;
-  padding: 10px 20px;
+  padding: 1em 1em;
   border-radius: 5px;
-  font-size: 1em;
+  width: 18em;
+  height: 3em;
+  font-size: 1.3rem;
 }
 
 .teacher {
-  background-color: #ff5733;
+  background: conic-gradient(from 180deg at 120.17% 50%, #b63613 -1.16deg, #EC8C24 40deg, #EC8222 75deg, #EC761F 105.53deg, #EC691C 160.77deg, #EC5F1A 217.51deg, #EC4213 358.84deg, #EC8C24 406.32deg);
   color: white;
   border: none;
   cursor: pointer;
@@ -63,22 +63,37 @@
 
 .student {
   background-color: white;
-  color: #ff5733;
-  border: solid #ff5733;
+  color: #EC8C24;
+  border:  1.5px solid#EC8C24;
   cursor: pointer;
 }
 
 /* Media query for mobile screens */
 @media (max-width: 768px) {
-  .welcome h2 {
-    font-size: 1.2em;
-  }
   .topSection {
-    background-position: center;
-    min-height: auto;
+    top: 0em;
+  
   }
 
-  button {
-    font-size: 0.8em;
+  .buttons {
+    font-size: 1em;
+    top: 55%;
+    
+    
   }
+
+  .buttons button{
+    width: 15em;
+  }
+
+  .welcome h2 {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 2em;
+    letter-spacing: 1.5px;
+    margin-bottom: 0;
+    font-weight: bolder;
+  }
+
+
 }

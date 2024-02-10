@@ -17,7 +17,7 @@ export default function Signin() {
     }
 
     function signInWithEmail() {
-        navigate('/welcome-back');
+        navigate('/teacher-login');
       }
 
     
@@ -27,6 +27,9 @@ export default function Signin() {
         signInWithPopup(auth,provider).then((result)=>{
             console.log(result)
         })
+        .then(()=>{
+            navigate('/welcome-back');
+        })
         .catch((error)=>{
             console.log(error)
         })
@@ -34,8 +37,13 @@ export default function Signin() {
 
     const googleLogin =()=>{
         const provider = new GoogleAuthProvider()
+        
         signInWithPopup(auth, provider).then((result)=>{
             console.log(result)
+        })
+
+        .then(()=>{
+            navigate('/welcome-back');
         })
         .catch((error)=>{
             console.log(error)
@@ -49,7 +57,7 @@ export default function Signin() {
             <img src={image} alt='studycreek-logo' className='studycreek-logo'/>
             <div className='signinText-div'>
                 <h3 className='signin-text'>Sign In</h3>
-                <p>Enjoy easily accesible reimagined education</p>
+                <p>Enjoy easy accesible and reimagined education</p>
             </div>
             <div className='signin-buttons'>
                 <button className='button google-button' onClick={googleLogin}><span><IoLogoGoogle/></span> Sign In with Google</button>

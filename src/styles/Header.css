@@ -31,7 +31,7 @@
     height: 3.5em;
     background-color: #EC8C24;
     margin-top: 2.6em;
-    margin-left: 5em;
+    margin-left: 1.5em;
     padding: 0.2em;
 }
 .menuIcon{
@@ -45,7 +45,7 @@
     border-radius: 50%;
     background-color: #EC8C24;
     padding: 0.5em;
-    margin: 1.2em 5em;
+    margin: 1.2em 2em;
 
 }
 .profileIcon{
@@ -70,7 +70,7 @@
         margin-top: 2em;
     }
     .menuIcon-div{
-        margin-left: 1.7em;
+        margin-left: 0.7em;
         margin-right: 2em;
     }
     .menuIcon{
@@ -79,7 +79,7 @@
     }
     
     .profileIcon-div{
-        margin: 1.3em 2em;
+        margin: 1.3em 0.8em;
     
     }
 

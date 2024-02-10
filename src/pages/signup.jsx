@@ -48,6 +48,10 @@ export default function Signup() {
         .catch((err)=>{
             console.log(err)
         })
+
+        auth.currentUser.getIdToken().then((idToken)=>{
+            console.log(idToken)
+          })
     }
 
   return (
