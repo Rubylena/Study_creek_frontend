@@ -1,20 +1,27 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './welcomeback.module.css'; 
-
 import logoImage from '../../assets/studycreekcolor.png';
+import { Context } from '../../context/contextProvider';
 
 
 const Welcome = () => {
+
+  const {setRole} = useContext(Context)
+
+
   const navigate = useNavigate();
 
   function logInAsATeacher() {
+    setRole('Teacher')
     navigate('/teacher-login');
   }
 
   function logInAsAStudent() {
+    setRole('Student')
     navigate('/student-login');
   }
+
 
   return (
     <div className={styles.app}> 

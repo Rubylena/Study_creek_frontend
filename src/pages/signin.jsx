@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import image from '../assets/studycreekcolor.png'
 import '../styles/signin.css'
 import { IoIosArrowRoundBack, IoLogoGoogle } from "react-icons/io";
@@ -9,7 +9,6 @@ import { FacebookAuthProvider, GoogleAuthProvider, signInWithPopup } from "fireb
 import { auth } from '../firebaseConfig';
 
 export default function Signin() {
-    const [showModal, setShowModal] = useState(false)
     const navigate = useNavigate()
 
     function signup(){
@@ -18,9 +17,7 @@ export default function Signin() {
 
     function signInWithEmail() {
         navigate('/teacher-login');
-      }
-
-    
+    }
 
     const facebookLogin = ()=>{
         const provider = new FacebookAuthProvider();
@@ -65,8 +62,8 @@ export default function Signin() {
                 <button className="button email-button" onClick={signInWithEmail}><span> <TfiEmail /></span>{' '} Sign In with Email</button>        
             </div>
         
-            <p className='newtext'>New here? <span onClick={()=>{setShowModal(!showModal)}}>Create Account</span></p>
-            {  showModal &&  <div className='signup-modal'>
+            <p className='newtext'>New here? <span onClick={signup}>Create Account</span></p>
+            {/* {  showModal &&  <div className='signup-modal'>
                 <div className='modal-content'>
                     <h3>Sign Up for free!</h3>
                     <p className='text'>I'm a </p>
@@ -77,7 +74,7 @@ export default function Signin() {
                 </div>
                 <p className='consent-text'>By proceeding you agree to our
              <a href>Terms & Condition and privacy policy</a></p>
-            </div>}
+            </div>} */}
             </div>
         </div>
     
