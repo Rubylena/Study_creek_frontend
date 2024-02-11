@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import {useNavigate } from "react-router-dom"
 import '../styles/signup.css'
 import image from '../assets/studycreekcolorICON.png'
-
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
 import { auth } from "../firebaseConfig"
 import { FaAngleRight } from "react-icons/fa6";
@@ -31,10 +30,30 @@ export default function Signup() {
         }))
     }
 
+          const getUser = async()=>{
+        const userToken = localStorage.getItem('userToken')
+        try{
+         const users= await fetch('https://creek.onrender.com/users',
+           { headers:{
+                Authorization: `Bearer ${userToken}`,
+                } 
+            })
+
+            
+            console.log(users)
+            
+        }
+        catch(err){
+                console.log(err)
+        } 
+    }
+
+
     const createUser =()=>{
         createUserWithEmailAndPassword(auth, userInfo.Email, userInfo.Password)
         .then((userCredential)=>{
             console.log(userCredential)
+            
           updateProfile(auth.currentUser,{
             displayName: userInfo.Firstname + " "+ userInfo.Lastname,
             phoneNumber: userInfo.Phonenumber
@@ -49,10 +68,12 @@ export default function Signup() {
             console.log(err)
         })
 
-        auth.currentUser.getIdToken().then((idToken)=>{
-            console.log(idToken)
-          })
+        // auth.currentUser.getIdToken().then((idToken)=>{
+           
+        //   })
     }
+
+  
 
   return (
     <div className='signupPage'>
@@ -60,6 +81,7 @@ export default function Signup() {
             <img src={image} alt='logo' width='70px'/>
             <h2>Study Creek</h2>
         </div>
+        
         
         <div className='signupfield'>
             <div className='inputfield'>
@@ -71,22 +93,22 @@ export default function Signup() {
             </div>}
                 <div className= {showSuccessSign? 'blur input-div':'input-div'}>
                     <h2>Create Your Account</h2> 
-                    <div class="input-area">
-                        <label htmlFor="Firstname"><span class="label-style">*First Name</span></label>
+                    <div className="input-area">
+                        <label htmlFor="Firstname"><span className="label-style">*First Name</span></label>
                         <input type="text" name="Firstname"
                             onChange={handleInputChange}
                             value={userInfo.Firstname}
                         />
                     </div>
                     <div className="input-area">
-                        <label htmlFor="Lastname"><span class="label-style">*Last Name</span></label>
+                        <label htmlFor="Lastname"><span className="label-style">*Last Name</span></label>
                         <input type="text" name="Lastname"
                             onChange={handleInputChange}
                             value={userInfo.Lastname}
                         />
                     </div>
                     <div className="input-area">
-                        <label htmlFor="Email"><span class="label-style">*Email</span></label>
+                        <label htmlFor="Email"><span className="label-style">*Email</span></label>
                         <input type="text"
                             name='Email'
                             onChange={handleInputChange}
@@ -94,7 +116,7 @@ export default function Signup() {
                         />
                     </div>
                     <div className="input-area">
-                        <label htmlFor="Phonenumber"><span class="label-style">*Phone Number</span></label>
+                        <label htmlFor="Phonenumber"><span className="label-style">*Phone Number</span></label>
                         <input type="text" 
                             name='Phonenumber'
                             onChange={handleInputChange}
@@ -102,7 +124,7 @@ export default function Signup() {
                         />
                     </div>
                     <div className="input-area">
-                        <label htmlFor="Country"><span class="label-style">*Country</span></label>
+                        <label htmlFor="Country"><span className="label-style">*Country</span></label>
                         <input type="text" 
                             name='Country'
                             onChange={handleInputChange}
@@ -110,7 +132,7 @@ export default function Signup() {
                         />
                     </div>
                     <div className="input-area">
-                        <label htmlFor="Password"><span class="label-style">*Password</span></label>
+                        <label htmlFor="Password"><span className="label-style">*Password</span></label>
                         <input type="password"
                             name='Password'
                             onChange={handleInputChange}
@@ -118,7 +140,7 @@ export default function Signup() {
                         />
                     </div>
                     <div className="input-area">
-                        <label htmlFor="Lastname"><span class="label-style">*Confirm Password</span></label>
+                        <label htmlFor="Lastname"><span className="label-style">*Confirm Password</span></label>
                         <input type="password"/>
                     </div>
                     <button className='signup-button'
