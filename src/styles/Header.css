@@ -11,12 +11,12 @@
     box-shadow: #375b732b 0 1px 3px;
     height: 100vh;
     width: 15%;
-    position: absolute;
+    position: fixed;
     top: 0em;
     left: 0em;
     color: #FFFFFF;
     padding: 2em;
-    overflow: hidden; 
+    overflow: auto;
 }
 
 .close-icon{

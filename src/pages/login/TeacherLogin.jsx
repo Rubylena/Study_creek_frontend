@@ -58,6 +58,7 @@ console.log(role)
 const setRole = async(e)=>{
   signIn(e)
   const userToken = localStorage.getItem('userToken')
+  console.log(userToken)
 
   try{
       const  response = await fetch('https://creek.onrender.com/users/role',{
@@ -65,12 +66,13 @@ const setRole = async(e)=>{
         headers:{
           Authorization: `Bearer ${userToken}`,
           },
-          body:{
-            role:role
+          body: {
+           role:role
           }
       })
 
-      return response.json()
+      const user =  await response.json()
+      console.log(user)
 
   }
   catch(err){
